@@ -1,2 +1,2 @@
 # Programming
-Solved in both c++ and Python
+Solutions to data structure and algorithmic problems along with miscellaneous tricks  
