@@ -3,4 +3,4 @@ Solutions to data structure and algorithmic problems along with miscellaneous tr
 
 ### Support or Contact
 
-Having trouble with Pages? Or Want to contribute ? Go for it and we’ll grow together .
+Want to contribute ? Go for it and we’ll grow together .
