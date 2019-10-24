@@ -43,7 +43,20 @@ class EqualExpense
         
         bool validate()
         {
-            
+            int sizeOfSplit = getExpenseSplit().size();
+            for(Split split:getExpenseSplit())
+            {
+                EqualSplit equalSplit = (EqualSplit) split;
+                totalSplitAmount += equalSplit.getSplitAmmount();
+            }
+            if(getExpenseSplit()[0].getSplitAmmount() *sizeOfSplit != totalSplitAmount )
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 };
 
@@ -58,7 +71,21 @@ class ExactExpense
         
         bool validate()
         {
-            
+            double totalAmount = getExpenseAmmount();
+            double totalSplitAmount = 0;
+            for(Split split:getExpenseSplit())
+            {
+                ExactSplit exactSplit = (ExactSplit) split;
+                totalSplitAmount += exactSplit.getSplitAmmount();
+            }
+            if(totalAmount != totalSplitAmount)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         } 
 };
 
@@ -73,7 +100,21 @@ class PercentageExpense
         
         bool validate()
         {
+            double totalSplitPercentage = 0;
+            for(Split split:getExpenseSplit())
+            {
+                PercentageSplit percentageSplit = (PercentageSplit) split;
+                totalSplitPercentage += percentageSplit.getPercentage();
+            }
             
+            if(totalSplitPercentage!=100)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 };
 
