@@ -1,3 +1,6 @@
+#include<bits/stdc++.h>
+using namespace std;
+
 class User
 {
     private:
@@ -5,20 +8,22 @@ class User
         string userName;
     public:
     
+        User();
+
         User(string userName,string userPhoneNumber)
         {
-            this.userPhoneNumber = userPhoneNumber;
-            this.userName = userName;
+            this->userPhoneNumber = userPhoneNumber;
+            this->userName = userName;
         }
         
         void setUserPhoneNumber(string userPhoneNumber)
         {
-            this.userPhoneNumber = userPhoneNumber;
+            this->userPhoneNumber = userPhoneNumber;
         }
         
         void setUserName(string userName)
         {
-            this.userName = userName;
+            this->userName = userName;
         }
                 
         string getUserPhoneNumber()
@@ -30,4 +35,4 @@ class User
         {
             return userName;
         }
-}
+};

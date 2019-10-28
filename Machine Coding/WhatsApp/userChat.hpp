@@ -1,30 +1,35 @@
+#include<bits/stdc++.h>
+#include "chat.hpp"
+using namespace std;
+
+
 class UserChat
 {
     private:
         User chatOwner;
-        User messgeFrom;
-        string message;
+        User messageFrom;
+        vector<Chat> chat;
     public:
-        UserChat(User chatOwner,User messgeFrom,string message)
+
+        UserChat();
+
+        UserChat(User chatOwner,User messageFrom,Chat chat)
         {
-            this.chatOwner = chatOwner;
-            this.messgeFrom = messgeFrom;
-            this.message = message;
+            this->chatOwner = chatOwner;
+            this->messageFrom = messageFrom;
+            this->chat.push_back(chat);
         }
         
-        void setChatOwner(User chatOwner)
-        {
-            this.chatOwner = chatOwner;
-        }
+        void setChatOwner(User chatOwner){ this->chatOwner = chatOwner; }
         
-        void setMessageFrom(User messgeFrom)
-        {
-            this.messgeFrom = messgeFrom;
-        }
+        void setMessageFrom(User messgeFrom){ this->messageFrom = messgeFrom; }
         
-        void setMessage(string message)
-        {
-            this.message = message;
-        }
+        void setMessage(Chat chat){ this->chat.push_back(chat); }
+
+        User getChatOwner(){ return chatOwner; }
+
+        User getMessageFrom(){ return messageFrom; }
+
+        vector<Chat> getChat() { return chat; }
         
-}
+};
