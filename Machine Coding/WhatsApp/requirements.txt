@@ -1,0 +1,4 @@
+1. add a user
+2. send message: senderName receiverName message
+3. show all chats of which user is part of
+4. show conversation of two users
