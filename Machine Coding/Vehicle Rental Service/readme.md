@@ -14,9 +14,9 @@ Flipkart is starting a new vehicle rental service called FlipKar. In this servic
 1. Onboard a new branch with the available vehicles.
 2. Onboard new vehicle(s) of an existing type to a particular branch.
 3. Rent vehicle for a time slot and a vehicle type (lowest price as the default choice of selection of vehicle, this should be extendable to any other strategy and should be configurable).
-	i. Implementation should be pluggable for one or more strategy.
-	ii. While booking if more than one vehicle is suitable for current strategy then selection should fallback on next strategy. E.g. lowest_price followed by vehicle_type etc.
-	iii. For example, let’s say there are more than one type of vehicle available for given no. of passenger, then selection can be based on lowest price first and next is the type of vehicle where Sedan is better than Hatchback (Both of them are 5 seaters).
+	1. Implementation should be pluggable for one or more strategy.
+	2. While booking if more than one vehicle is suitable for current strategy then selection should fallback on next strategy. E.g. lowest_price followed by vehicle_type etc.
+	3. For example, let’s say there are more than one type of vehicle available for given no. of passenger, then selection can be based on lowest price first and next is the type of vehicle where Sedan is better than Hatchback (Both of them are 5 seaters).
 4. A system view should be made available, such as currently blocked vehicles, available vehicles of all the branches.
 
 ## Bonus question (good to have, only if required expectations are met):
